@@ -6,20 +6,15 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 18:58:19 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/13 12:38:14 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/20 11:08:48 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
-// int main ()
-// {
-// 	int y = ft_isdigit ('11');
-// 	printf ("%d",y);
-// }

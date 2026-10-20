@@ -6,12 +6,13 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:19:22 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/13 18:19:23 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/20 11:11:50 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
@@ -20,11 +21,3 @@ int ft_tolower(int c)
 	}
 	return (c);
 }
-
-// #include <stdio.h>
-
-// int main ()
-// {
-// 	int r = ft_tolower ('A');
-// 	printf("%d",r);
-// }

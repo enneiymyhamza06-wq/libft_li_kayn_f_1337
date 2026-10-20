@@ -6,9 +6,11 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:01:16 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/13 19:28:13 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/20 11:07:54 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int atoi(const char *nptr)
 {

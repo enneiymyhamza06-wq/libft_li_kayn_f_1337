@@ -6,11 +6,13 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:19:35 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/13 18:19:43 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/20 11:12:10 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 	{
@@ -19,11 +21,3 @@ int ft_toupper(int c)
 	}
 	return (c);
 }
-
-// #include <stdio.h>
-
-// int main ()
-// {
-// 	int r = ft_toupper (6);
-// 	printf("%d",r);
-// }

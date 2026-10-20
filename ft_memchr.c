@@ -6,11 +6,11 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 21:08:46 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/18 09:45:40 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/20 11:09:11 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -29,8 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-// int main ()
-// {
-// 	unsigned char str[] = "hello";
-// 	printf("\n \n this is result : %p",ft_memchr(str,'o',5));
-// }
