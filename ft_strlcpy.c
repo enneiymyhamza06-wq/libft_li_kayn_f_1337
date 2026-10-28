@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 14:26:39 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/20 11:11:04 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/22 15:02:11 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (l);
 }
-int	main(void)

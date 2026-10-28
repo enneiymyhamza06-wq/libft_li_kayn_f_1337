@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 17:02:08 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/20 11:12:36 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/27 21:04:48 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,39 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	len_dst;
 	size_t	len_src;
+	size_t	len_dst;
 	size_t	i;
-	size_t	b;
+	size_t	l;
+	size_t	w;
 
-	len_dst = ft_strlen(dst);
+	len_dst = 0;
+	len_src = 0;
 	len_src = ft_strlen(src);
 	i = 0;
-	b = 0;
-	if (size == 0)
-		return (len_dst + len_src);
-	if (len_dst > size)
-		return (len_dst + len_src);
-	while (dst[i])
-	{
+	while (i < size && dst[i])
 		i++;
-	}
-	while (src[b] && b < size - 1)
+	if (i == size)
+		return (size + len_src);
+	len_dst = i;
+	l = 0;
+	w = (size - len_dst) - 1;
+	while (l < w && src[l])
 	{
-		dst[i] = src[b];
+		dst[i] = src[l];
 		i++;
-		b++;
+		l++;
 	}
 	dst[i] = '\0';
 	return (len_dst + len_src);
 }
+
+// int	main(void)
+// {
+// 	char dst[] = "hamza";
+// 	const char src[] = "naady";
+// 	size_t size = 10;
+// 	size_t len = ft_strlcat(dst, src, size);
+// 	printf("%d \n", len);
+// 	printf("%s\n", dst);
+// }

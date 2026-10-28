@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 11:14:29 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/20 13:21:22 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/27 14:48:19 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	if (little[0] == '\0')
-		return (char *)(big);
+		return ((char *)(big));
 	while (i < len && big[i])
 	{
 		z = i;
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			o++;
 		}
 		if (little[o] == '\0')
-			return (char *)(&big[i]);
+			return ((char *)(&big[i]));
 		i++;
 	}
 	return (NULL);
