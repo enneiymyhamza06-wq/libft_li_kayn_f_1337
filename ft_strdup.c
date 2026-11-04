@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 12:51:39 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/20 11:10:30 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:05:56 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 	size_t	len_str;
 
-	len_str = ft_strleen(s);
+	len_str = ft_strlen(s);
 	p = malloc(len_str + 1);
 	i = 0;
 	if (p == NULL)

@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 23:15:25 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/27 20:16:43 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/10/29 01:14:50 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	p[i] = '\0';
 	return (p);
 }
-
-// int main ()
-// {
-// 	printf("[%s]",ft_strtrim("xxxxx","s"));
-// }
