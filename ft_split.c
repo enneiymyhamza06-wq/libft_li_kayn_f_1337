@@ -3,41 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hamza <hamza@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 19:23:32 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/11/01 15:01:09 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/11/07 17:57:41 by hamza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-// static int	count_words(char *s, char c)
-// {
-// 	int	i;
-// 	int	count;
-// 	int	word;
-
-// 	i = 0;
-// 	count = 0;
-// 	word = 0;
-// 	while (s[i])
-// 	{
-// 		if (s[i] == c)
-// 			word = 0;
-// 		else if (word == 0)
-// 		{
-// 			count++;
-// 			word = 1;
-// 		}
-// 		i++;
-// 	}
-// 	return (count);
-// }
-
-#include "libft.h"
-
-static int	num_word(char *s, char c)
+static int	ch7al_mn_klma(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -57,44 +33,65 @@ static int	num_word(char *s, char c)
 	return count;
 }
 
-int len_word(char *s,char c)
+char **free_kolchi (char **res,size_t n)
 {
-	char **arr;
-	int j;
-	int i;
-
-	len_klma = 0;
-	i = 0;
-	while ((s[i] >= 9 && s[i] <= 13) && s[i])
+	while (n > 0)
 	{
-		i++;
-		j++;
+		n--;
+		free(res[n]);
 	}
-	return len_klma;
+	free(res);
+	return NULL;
 }
+
+char **stirngs_klmat (char **res ,char const *s , char c)
+{
+	size_t i;
+	size_t len;
+
+	i = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (!*s)
+		break;
+	len = 0;
+		while (s[len] && s[len] != c)
+			len++;
+		res[i] = ft_substr(s,0,len);
+		if (!res[i])
+			return (free_kolchi(res, i));
+		i++;
+		s = s + len;
+	}
+	res[i] = NULL;
+	return (res);
+}
+
 
 char **ft_split(char const *s, char c)
 {
-	char **result;
-	int i;
-	int k;
-	int j;
-	result = malloc((char **)num_word(s) +1) * sizeof(char *);
-	if (!result)
+	if (!*s)
 	return NULL;
-	i = 0;
-	while (s[i])
-	{
-		while ((s[i] >= 9 && s[i] <= 13) && s[i])
-			i++;
-		while ((!(s[i] >= 9 && s[i] <= 13) && s[i]))
-			tab[j] = malloc(len_word(s) +1) * sizeof(char);
-		
-	}
-	
+	char **result;
+	result = malloc(sizeof(char *) *(ch7al_mn_klma(s, c) + 1));
+	if (!result)
+		return NULL;
+
+	return (stirngs_klmat(result,s,c));
 }
 
-
-
-
-
+int main ()
+{
+	char *arr = "---- hello -- world ---- hamza -- o tahiyati  -";
+	char **res = ft_split(arr,'-');
+	int i = 0;
+	while (res && res[i])
+	{
+		printf("%s\n",res[i]);
+		free(res[i]);
+		i++;
+	}
+	free(res);
+}
