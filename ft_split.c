@@ -6,12 +6,11 @@
 /*   By: hamza <hamza@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 19:23:32 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/11/07 17:57:41 by hamza            ###   ########.fr       */
+/*   Updated: 2026/11/08 12:00:37 by hamza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ch7al_mn_klma(char const *s, char c)
 {
@@ -33,7 +32,7 @@ static int	ch7al_mn_klma(char const *s, char c)
 	return count;
 }
 
-char **free_kolchi (char **res,size_t n)
+static char **free_kolchi (char **res,size_t n)
 {
 	while (n > 0)
 	{
@@ -44,7 +43,7 @@ char **free_kolchi (char **res,size_t n)
 	return NULL;
 }
 
-char **stirngs_klmat (char **res ,char const *s , char c)
+static char **stirngs_klmat (char **res ,char const *s , char c)
 {
 	size_t i;
 	size_t len;
@@ -82,16 +81,16 @@ char **ft_split(char const *s, char c)
 	return (stirngs_klmat(result,s,c));
 }
 
-int main ()
-{
-	char *arr = "---- hello -- world ---- hamza -- o tahiyati  -";
-	char **res = ft_split(arr,'-');
-	int i = 0;
-	while (res && res[i])
-	{
-		printf("%s\n",res[i]);
-		free(res[i]);
-		i++;
-	}
-	free(res);
-}
+// int main ()
+// {
+// 	char *arr = "---- hello -- world ---- hamza -- o tahiyati  -";
+// 	char **res = ft_split(arr,'-');
+// 	int i = 0;
+// 	while (res && res[i])
+// 	{
+// 		printf("%s\n",res[i]);
+// 		free(res[i]);
+// 		i++;
+// 	}
+// 	free(res);
+// }
