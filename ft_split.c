@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hamza <hamza@student.42.fr>                +#+  +:+       +#+        */
+/*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 19:23:32 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/11/08 12:00:37 by hamza            ###   ########.fr       */
+/*   Updated: 2026/11/10 19:55:45 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ static int	ch7al_mn_klma(char const *s, char c)
 			i++;
 		count++;
 	}
-	return count;
+	return (count);
 }
 
-static char **free_kolchi (char **res,size_t n)
+static char	**free_kolchi(char **res, size_t n)
 {
 	while (n > 0)
 	{
@@ -40,13 +40,13 @@ static char **free_kolchi (char **res,size_t n)
 		free(res[n]);
 	}
 	free(res);
-	return NULL;
+	return (NULL);
 }
 
-static char **stirngs_klmat (char **res ,char const *s , char c)
+static char	**stirngs_klmat(char **res, char const *s, char c)
 {
-	size_t i;
-	size_t len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	while (*s)
@@ -54,11 +54,11 @@ static char **stirngs_klmat (char **res ,char const *s , char c)
 		while (*s && *s == c)
 			s++;
 		if (!*s)
-		break;
-	len = 0;
+			break ;
+		len = 0;
 		while (s[len] && s[len] != c)
 			len++;
-		res[i] = ft_substr(s,0,len);
+		res[i] = ft_substr(s, 0, len);
 		if (!res[i])
 			return (free_kolchi(res, i));
 		i++;
@@ -68,17 +68,16 @@ static char **stirngs_klmat (char **res ,char const *s , char c)
 	return (res);
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	if (!*s)
-	return NULL;
-	char **result;
-	result = malloc(sizeof(char *) *(ch7al_mn_klma(s, c) + 1));
-	if (!result)
-		return NULL;
+	char	**result;
 
-	return (stirngs_klmat(result,s,c));
+	if (!s)
+		return (NULL);
+	result = malloc(sizeof(char *) * (ch7al_mn_klma(s, c) + 1));
+	if (!result)
+		return (NULL);
+	return (stirngs_klmat(result, s, c));
 }
 
 // int main ()

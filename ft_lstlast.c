@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 19:56:42 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/11/04 10:39:00 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/11/08 15:49:17 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_list	*ft_lstlast(t_list *lst)
 		gg = gg->next;
 	return (gg);
 }
+
 // #include <stdio.h>
 
 // int main ()

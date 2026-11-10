@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 13:51:07 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/10/20 13:34:10 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/11/10 15:23:49 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
-	max_elemnt = SIZE_MAX / size;
+	max_elemnt = (size_t)-1 / size;
 	if (size != 0 && nmemb > max_elemnt)
 		return (NULL);
 	total_size = nmemb * size;

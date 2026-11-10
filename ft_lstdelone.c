@@ -6,7 +6,7 @@
 /*   By: haenneiy <haenneiy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 11:34:33 by haenneiy          #+#    #+#             */
-/*   Updated: 2026/11/05 13:42:24 by haenneiy         ###   ########.fr       */
+/*   Updated: 2026/11/10 20:05:34 by haenneiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return ;
 	(*del)(lst->content);
 	free(lst);
 }
-
 // void	del(void *content)
 // {
 // 	free(content);
